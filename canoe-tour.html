@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Canoe Education — Sync, Reflection, Self-Reliance. PlayOutside Korea's signature river program on the Hongcheon River.">
+    <title>Canoe Education | PlayOutside Korea</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-deep:   #0F2818;
+            --green-mid:    #1F5A3B;
+            --green-light:  #3A8659;
+            --earth:        #6B4423;
+            --earth-light:  #D4AF8A;
+            --stone:        #8A8A7E;
+            --cream:        #FAFAF8;
+            --white:        #FFFFFF;
+            --ink:          #0A0A0A;
+            --ink-muted:    #666;
+            --radius:       14px;
+            --transition:   0.35s ease;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.2; }
+        img { display: block; width: 100%; object-fit: cover; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { width: min(90%, 1160px); margin-inline: auto; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .88rem; font-weight: 700;
+            letter-spacing: .04em;
+            transition: all var(--transition);
+            cursor: pointer; border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+        .btn-primary {
+            background: var(--green-mid); color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--green-deep);
+            box-shadow: 0 8px 28px rgba(31,90,59,.4);
+            transform: translateY(-3px);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 999;
+            padding: 0 5%;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            transition: box-shadow var(--transition);
+        }
+        nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+        .logo-wrap { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 120px; height: 70px; background: #FFFFFF; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding: 8px; }
+        .logo-icon img { max-width: 85%; max-height: 85%; width: auto; height: auto; object-fit: contain; }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); line-height: 1.1; }
+        .logo-text span { display: block; font-size: .62rem; font-weight: 600; color: var(--stone); letter-spacing: .12em; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 36px; }
+        .nav-links a { font-size: .88rem; font-weight: 500; color: var(--ink-muted); transition: color var(--transition); }
+        .nav-links a:hover { color: var(--green-mid); }
+        .nav-cta { font-size: .82rem !important; font-weight: 700 !important; background: var(--green-mid); color: var(--white) !important; padding: 9px 20px; border-radius: 50px; }
+        .nav-cta:hover { background: var(--green-deep); color: var(--white) !important; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: all var(--transition); }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--green-deep) 0%, #0F4A2E 100%);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            padding: 72px 5% 0;
+            text-align: center; color: var(--white);
+            position: relative; overflow: hidden;
+        }
+        #hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 Q25,40 50,50 T100,50" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="0.5"/></svg>');
+            opacity: 0.3;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 60px 20px; }
+        .hero-content .tag {
+            display: inline-block;
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            color: var(--earth-light);
+            font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 6px 14px; border-radius: 50px;
+            margin-bottom: 24px;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 900;
+            line-height: 1.08;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,.15);
+        }
+        .hero-content h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--earth-light), #E8C9A0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,.8);
+            line-height: 1.75;
+            margin-bottom: 32px;
+        }
+
+        /* SECTION STYLING */
+        section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 {
+            font-size: 2.4rem; font-weight: 800;
+            color: var(--green-deep); margin-bottom: 16px;
+        }
+        .section-header p {
+            color: var(--ink-muted); max-width: 700px;
+            margin-inline: auto; font-size: 1rem;
+        }
+
+        /* PHILOSOPHY */
+        #philosophy { background: var(--white); }
+        .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .philosophy-text h3 { font-size: 1.4rem; color: var(--green-deep); margin-bottom: 20px; font-weight: 800; }
+        .philosophy-text p { margin-bottom: 18px; color: var(--ink-muted); line-height: 1.8; }
+        .philosophy-text strong { color: var(--green-mid); font-weight: 700; }
+        .philosophy-pills { display: flex; flex-direction: column; gap: 18px; }
+        .pill {
+            background: var(--cream);
+            padding: 20px 24px; border-radius: 10px;
+            border-left: 4px solid var(--green-mid);
+            box-shadow: 0 2px 8px rgba(0,0,0,.03);
+        }
+        .pill h4 { font-size: .95rem; font-weight: 800; color: var(--green-deep); margin-bottom: 8px; }
+        .pill p { font-size: .85rem; color: var(--ink-muted); margin: 0; line-height: 1.6; }
+
+        /* PROGRAMS */
+        #programs { background: var(--cream); }
+        .programs-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .program-showcase-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,.06);
+            transition: all var(--transition);
+        }
+        .program-showcase-card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .psc-img { height: 280px; background: var(--green-light); position: relative; overflow: hidden; }
+        .psc-img img { height: 100%; object-fit: cover; }
+        .psc-badge { position: absolute; top: 14px; left: 14px; background: var(--earth); color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 50px; }
+        .psc-body { padding: 28px; }
+        .psc-body h3 { font-size: 1.2rem; font-weight: 800; color: var(--green-deep); margin-bottom: 12px; }
+        .psc-body p { font-size: .9rem; color: var(--ink-muted); line-height: 1.7; }
+        .psc-body ul { margin-top: 16px; margin-left: 16px; list-style: disc; }
+        .psc-body li { font-size: .85rem; color: var(--ink-muted); margin-bottom: 8px; }
+
+        /* CURRICULUM */
+        #curriculum { background: var(--white); }
+        .curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .curriculum-step {
+            background: var(--cream);
+            padding: 32px;
+            border-radius: var(--radius);
+            border-top: 4px solid var(--green-mid);
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+        }
+        .curriculum-step h3 {
+            font-size: 1.1rem; font-weight: 800;
+            color: var(--green-deep); margin-bottom: 16px;
+        }
+        .curriculum-step p { font-size: .9rem; color: var(--ink-muted); line-height: 1.7; }
+        .curriculum-step ul { margin-top: 14px; margin-left: 18px; }
+        .curriculum-step li {
+            font-size: .85rem; color: var(--ink-muted);
+            margin-bottom: 10px; line-height: 1.6;
+        }
+        .curriculum-step strong { color: var(--green-mid); font-weight: 700; }
+
+        /* GALLERY */
+        #gallery { background: var(--cream); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 250px;
+            gap: 12px;
+        }
+        .gallery-item {
+            border-radius: 10px; overflow: hidden;
+            background: var(--green-light);
+            box-shadow: 0 2px 8px rgba(0,0,0,.06);
+        }
+        .gallery-item img { height: 100%; }
+
+        /* FOOTER */
+        footer {
+            background: var(--green-deep); color: rgba(255,255,255,.55);
+            padding: 48px 0 24px; text-align: center;
+        }
+        footer p { font-size: .85rem; }
+
+        /* ANIMATIONS */
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn .7s ease forwards; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .philosophy-grid, .programs-showcase, .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="logo-wrap">
+        <div class="logo-text">
+            PlayOutside Korea
+            <span>Outdoor Education</span>
+        </div>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Programs</a>
+        <a href="index.html#contact" class="nav-cta">Back to Main</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+    <div class="hero-content">
+        <span class="tag">Signature Program</span>
+        <h1>
+            Paddle in <em>Sync.</em><br>
+            Reflect in <em>Silence.</em><br>
+            Navigate with <em>Self-Reliance.</em>
+        </h1>
+        <p>
+            Canoe education is not recreation—it is a transformative experience on the Hongcheon River where teamwork, reflection, and calculated risk-taking converge.
+        </p>
+    </div>
+</header>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+    <div class="container">
+        <div class="section-header">
+            <h2>Three Pillars of Canoe Education</h2>
+        </div>
+        <div class="philosophy-grid fade-in">
+            <div class="philosophy-text">
+                <h3>What Makes Canoe Education Different</h3>
+                <p>
+                    A tandem canoe requires perfect synchronization between bow and stern paddlers. In navigating unfamiliar waters, participants naturally develop <strong>empathy, communication, and mutual reliance</strong>—not through lectures, but through lived experience on the river.
+                </p>
+                <p>
+                    Without motorized propulsion, paddlers surrender to the <strong>natural speed of the water</strong>. This deliberate slowness creates space for <strong>deep reflection</strong> on the quiet ripples.
+                </p>
+                <p>
+                    When strong currents challenge you or wind threatens balance, you learn to assess risk, make decisions independently, and recover gracefully—the essence of <strong>self-reliance</strong>.
+                </p>
+            </div>
+            <div class="philosophy-pills">
+                <div class="pill">
+                    <h4>🤝 Sync & Teamwork</h4>
+                    <p>Tandem paddling teaches synchronization, communication, and how to move together through life's currents.</p>
+                </div>
+                <div class="pill">
+                    <h4>🌊 Analogue Reflection</h4>
+                    <p>Far from digital noise, you paddle in silence and contemplate your inner landscape on the river.</p>
+                </div>
+                <div class="pill">
+                    <h4>💪 Self-Reliance</h4>
+                    <p>Calculated risks, problem-solving, and recovery—you learn to navigate and trust yourself in uncertain conditions.</p>
+                </div>
+                <div class="pill">
+                    <h4>🌱 LNT Ethics</h4>
+                    <p>Leave No Trace principles protect the Hongcheon River's ecosystem for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+    <div class="container">
+        <div class="section-header">
+            <h2>Two Routes on the Hongcheon</h2>
+            <p>Programs customized for different ages, group sizes, and educational goals.</p>
+        </div>
+        <div class="programs-showcase fade-in">
+            <div class="program-showcase-card">
+                <div class="psc-img">
+                    <img src="./photo/카누투어1.JPG" alt="Daily Picnic Tour on Hongcheon River">
+                    <span class="psc-badge">1 Day</span>
+                </div>
+                <div class="psc-body">
+                    <h3>Daily Picnic Tour</h3>
+                    <p>An introductory exploration of the Hongcheon's hidden beauty around "Baebawi" (Boat Rock). Perfect for first-time paddlers.</p>
+                    <ul>
+                        <li><strong>Paddle Basics:</strong> Strokes, steering, safety drills in calm waters</li>
+                        <li><strong>Water Safety:</strong> PFD fitting, capsize recovery, rescue techniques</li>
+                        <li><strong>Analogue Sense:</strong> Quiet paddling, landscape reading, nature observation</li>
+                        <li><strong>Duration:</strong> 1 day (full day with lunch on the riverbank)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="program-showcase-card">
+                <div class="psc-img">
+                    <img src="./photo/카누투어2.jpeg" alt="Camp Canoe Journey overnight bivouac">
+                    <span class="psc-badge">1 Night · 2 Days</span>
+                </div>
+                <div class="psc-body">
+                    <h3>Camp Canoe Journey</h3>
+                    <p>Our signature residential program. Paddle during the day, bivouac under the stars at night. Ideal for DofE Expeditions and leadership development.</p>
+                    <ul>
+                        <li><strong>River Exploration:</strong> Multi-hour paddling with navigation challenges</li>
+                        <li><strong>Off-Grid Camping:</strong> Bivouac (lightweight camping) with no amenities</li>
+                        <li><strong>Reflection & Debrief:</strong> Evening group reflection and campfire discussions</li>
+                        <li><strong>Duration:</strong> 1 night, 2 days (Fri–Sun or custom dates)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+    <div class="container">
+        <div class="section-header">
+            <h2>Canoe Academy: Level 1 Course</h2>
+            <p>"From passenger to paddler—learn to navigate with confidence and synchronization."</p>
+        </div>
+        <div class="curriculum-grid fade-in">
+            <div class="curriculum-step">
+                <h3>① Ground School & Equipment</h3>
+                <p>Master the foundation before entering the water.</p>
+                <ul>
+                    <li><strong>Canoe Anatomy:</strong> Bow, stern, gunwale, and structural understanding</li>
+                    <li><strong>PFD Mastery:</strong> International standards, proper fit, inspection</li>
+                    <li><strong>Embark & Disembark:</strong> Safe entry and exit with weight distribution control</li>
+                    <li><strong>Equipment Check:</strong> Paddle inspection, rope handling, dry bag packing</li>
+                </ul>
+            </div>
+            <div class="curriculum-step">
+                <h3>② Basic Paddling Strokes</h3>
+                <p>Synchronize with your partner through refined technique.</p>
+                <ul>
+                    <li><strong>Forward & Backward:</strong> Power and finesse in straight-line paddling</li>
+                    <li><strong>Sweep & Draw:</strong> Turning, banking, and lateral movement</li>
+                    <li><strong>Stopping Strokes:</strong> Emergency stopping and recovery</li>
+                    <li><strong>Partner Synchronization:</strong> Bow-stern harmony drills and rhythm</li>
+                </ul>
+            </div>
+            <div class="curriculum-step">
+                <h3>③ Water Safety & Rescue</h3>
+                <p>Experience controlled risk; conquer fear through practice.</p>
+                <ul>
+                    <li><strong>Capsize Drill:</strong> Intentional tipping to build water confidence</li>
+                    <li><strong>Self-Rescue:</strong> Recovering from water, re-entering the canoe</li>
+                    <li><strong>Team Rescue:</strong> Assisting and rescuing a partner in distress</li>
+                    <li><strong>Scenario Training:</strong> Real-world challenges (wind, swift water, fatigue)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2>Canoe in Action</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="./photo/카누투어1.JPG" alt="Canoe on Hongcheon River">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/카누투어2.jpeg" alt="Paddling teamwork">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드11.jpeg" alt="Canoe journey">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드12.jpeg" alt="Bivouac camping">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드13.jpeg" alt="Water safety training">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드14.jpeg" alt="Night sky reflection">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section style="background: var(--green-deep); color: var(--white); text-align: center; padding: 80px 5%;">
+    <div class="container fade-in">
+        <h2 style="color: var(--white); margin-bottom: 16px;">Ready to Paddle?</h2>
+        <p style="color: rgba(255,255,255,.8); margin-bottom: 32px;">
+            Book a Daily Tour, apply for the Camp Canoe Journey, or request a custom group program.
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">Get in Touch →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>© 2026 PlayOutside Korea | <strong>Canoe Education Signature Program</strong></p>
+        <p style="margin-top: 8px; font-size: .75rem;">플레이아웃사이드 · 아웃도어 교육 전문 단체</p>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+        setTimeout(() => el.style.animation = 'fadeIn .7s ease forwards', i * 100);
+    });
+</script>
+
+</body>
+</html>
