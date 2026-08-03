@@ -259,6 +259,44 @@
         .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn .7s ease forwards; }
         @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
+        /* HERO INFO BAR */
+        .hero-info-bar {
+            display: flex; align-items: center;
+            margin-top: 36px; padding: 20px 28px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 14px;
+            backdrop-filter: blur(8px);
+            max-width: 700px; margin-inline: auto;
+            margin-top: 36px;
+        }
+        .hero-info-item {
+            display: flex; align-items: center; gap: 12px;
+            flex: 1; justify-content: center;
+        }
+        .hero-info-icon { font-size: 1.3rem; flex-shrink: 0; }
+        .hero-info-label {
+            font-size: .68rem; font-weight: 600;
+            color: rgba(255,255,255,.5);
+            text-transform: uppercase; letter-spacing: .08em;
+            margin-bottom: 2px;
+        }
+        .hero-info-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .9rem; font-weight: 700;
+            color: var(--white);
+        }
+        .hero-info-divider {
+            width: 1px; height: 36px;
+            background: rgba(255,255,255,.15);
+            margin: 0 4px; flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .hero-info-bar { flex-wrap: wrap; gap: 16px; padding: 16px; }
+            .hero-info-item { flex: calc(50% - 8px); }
+            .hero-info-divider { display: none; }
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -307,6 +345,40 @@
         <p>
             Canoe education is not recreation—it is a transformative experience on the Hongcheon River where teamwork, reflection, and calculated risk-taking converge.
         </p>
+
+        <div class="hero-info-bar">
+            <div class="hero-info-item">
+                <span class="hero-info-icon">📅</span>
+                <div>
+                    <div class="hero-info-label">Duration</div>
+                    <div class="hero-info-value">1–3 Days</div>
+                </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">👥</span>
+                <div>
+                    <div class="hero-info-label">Group Size</div>
+                    <div class="hero-info-value">4+ People</div>
+                </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">📍</span>
+                <div>
+                    <div class="hero-info-label">Location</div>
+                    <div class="hero-info-value">Hongcheon River</div>
+                </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">✉️</span>
+                <div>
+                    <div class="hero-info-label">Consultation</div>
+                    <div class="hero-info-value">Free</div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 
