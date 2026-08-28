@@ -634,6 +634,9 @@
         });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
 </script>
 
 </body>
