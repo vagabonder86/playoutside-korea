@@ -325,8 +325,8 @@
         }
         .tab-btn.active { background: var(--green-mid); color: var(--white); }
 
-        .programs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-        .prog-panel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+        .programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+        .prog-panel { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
         .program-card {
             background: var(--white);
@@ -521,7 +521,7 @@
         /* ── RESPONSIVE ────────────────────────────────────── */
         @media (max-width: 1024px) {
             .programs-grid, .prog-panel.active { grid-template-columns: repeat(2, 1fr); }
-            .prog-panel { grid-template-columns: repeat(2, 1fr); }
+            .prog-panel { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
@@ -830,7 +830,6 @@
                     <a href="#contact" class="card-link">Contact Us →</a>
                 </div>
             </div>
-        </div>
 
             <div class="program-card fade-in">
                 <div class="program-card-img">
