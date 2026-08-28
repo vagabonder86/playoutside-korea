@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Outdoor Leadership Korea | PlayOutside Korea</title>
+    <meta name="description" content="Youth Outdoor Leadership program in Korea. Multi-day residential program developing leadership, teamwork, and self-reliance through hiking and outdoor challenges in Korean mountains.">
+    <meta name="keywords" content="youth outdoor leadership Korea, outdoor education Korea, leadership program Korea, hiking Korea, DofE Korea, international school Korea outdoor">
+    <link rel="canonical" href="https://playoutsidekorea.com/youth-outdoor-leadership.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://playoutsidekorea.com/youth-outdoor-leadership.html">
+    <meta property="og:title" content="Youth Outdoor Leadership Korea | PlayOutside Korea">
+    <meta property="og:description" content="Multi-day residential leadership program through hiking and outdoor challenges in Korean mountains. Groups of 4–10 people.">
+    <meta property="og:image" content="https://playoutsidekorea.com/photo/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83%EC%82%AC%EC%9D%B4%EB%93%9C2.JPG">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="PlayOutside Korea">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6PGJPWHT1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T6PGJPWHT1');
+    </script>
+
+    <link rel="icon" type="image/png" href="./photo/logo.png">
+    <link rel="apple-touch-icon" href="./photo/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-deep:   #0F2818;
+            --green-mid:    #1F5A3B;
+            --green-light:  #3A8659;
+            --earth:        #6B4423;
+            --earth-light:  #D4AF8A;
+            --stone:        #8A8A7E;
+            --cream:        #FAFAF8;
+            --white:        #FFFFFF;
+            --ink:          #0A0A0A;
+            --ink-muted:    #666;
+            --radius:       14px;
+            --transition:   0.35s ease;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.2; }
+        img { display: block; width: 100%; object-fit: cover; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { width: min(90%, 1160px); margin-inline: auto; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .88rem; font-weight: 700;
+            letter-spacing: .04em;
+            transition: all var(--transition);
+            cursor: pointer; border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+        .btn-primary { background: var(--green-mid); color: var(--white); }
+        .btn-primary:hover {
+            background: var(--green-deep);
+            box-shadow: 0 8px 28px rgba(31,90,59,.4);
+            transform: translateY(-3px);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 999;
+            padding: 0 5%;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            transition: box-shadow var(--transition);
+        }
+        nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); line-height: 1.1; }
+        .logo-text span { display: block; font-size: .62rem; font-weight: 600; color: var(--stone); letter-spacing: .12em; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 36px; }
+        .nav-links a { font-size: .88rem; font-weight: 500; color: var(--ink-muted); transition: color var(--transition); }
+        .nav-links a:hover { color: var(--green-mid); }
+        .nav-cta { font-size: .82rem !important; font-weight: 700 !important; background: var(--green-mid); color: var(--white) !important; padding: 9px 20px; border-radius: 50px; }
+        .nav-cta:hover { background: var(--green-deep); color: var(--white) !important; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: all var(--transition); }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu {
+            display: none; position: fixed; top: 72px; left: 0; right: 0;
+            background: var(--white); padding: 24px 5% 32px;
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            box-shadow: 0 12px 32px rgba(0,0,0,.08);
+            z-index: 998;
+        }
+        .mobile-menu.open { display: flex; flex-direction: column; gap: 20px; }
+        .mobile-menu a { font-size: 1rem; font-weight: 600; color: var(--ink); }
+
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--green-deep) 0%, #1A4A2E 100%);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            padding: 72px 5% 0;
+            text-align: center; color: var(--white);
+            position: relative; overflow: hidden;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 60px 20px; }
+        .hero-content .tag {
+            display: inline-block;
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            color: var(--earth-light);
+            font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 6px 14px; border-radius: 50px;
+            margin-bottom: 24px;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 900; line-height: 1.08;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,.15);
+        }
+        .hero-content h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--earth-light), #E8C9A0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,.8);
+            line-height: 1.75;
+            margin-bottom: 32px;
+        }
+
+        /* HERO INFO BAR */
+        .hero-info-bar {
+            display: flex; align-items: center;
+            margin-top: 36px; padding: 20px 28px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 14px;
+            backdrop-filter: blur(8px);
+            max-width: 700px; margin-inline: auto;
+        }
+        .hero-info-item { display: flex; align-items: center; gap: 12px; flex: 1; justify-content: center; }
+        .hero-info-icon { font-size: 1.3rem; flex-shrink: 0; }
+        .hero-info-label { font-size: .68rem; font-weight: 600; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
+        .hero-info-value { font-family: 'Montserrat', sans-serif; font-size: .9rem; font-weight: 700; color: var(--white); }
+        .hero-info-divider { width: 1px; height: 36px; background: rgba(255,255,255,.15); margin: 0 4px; flex-shrink: 0; }
+
+        /* SECTION */
+        section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.4rem; font-weight: 800; color: var(--green-deep); margin-bottom: 16px; }
+        .section-header p { color: var(--ink-muted); max-width: 700px; margin-inline: auto; font-size: 1rem; }
+
+        /* PHILOSOPHY */
+        #philosophy { background: var(--white); }
+        .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .philosophy-text h3 { font-size: 1.4rem; color: var(--green-deep); margin-bottom: 20px; font-weight: 800; }
+        .philosophy-text p { margin-bottom: 18px; color: var(--ink-muted); line-height: 1.8; }
+        .philosophy-text strong { color: var(--green-mid); font-weight: 700; }
+        .philosophy-pills { display: flex; flex-direction: column; gap: 18px; }
+        .pill { background: var(--cream); padding: 20px 24px; border-radius: 10px; border-left: 4px solid var(--green-mid); box-shadow: 0 2px 8px rgba(0,0,0,.03); }
+        .pill h4 { font-size: .95rem; font-weight: 800; color: var(--green-deep); margin-bottom: 8px; }
+        .pill p { font-size: .85rem; color: var(--ink-muted); margin: 0; line-height: 1.6; }
+
+        /* PROGRAMS */
+        #programs { background: var(--cream); }
+        .programs-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .program-showcase-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.06); transition: all var(--transition); }
+        .program-showcase-card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .psc-img { height: 280px; background: var(--green-light); position: relative; overflow: hidden; }
+        .psc-img img { height: 100%; object-fit: cover; }
+        .psc-badge { position: absolute; top: 14px; left: 14px; background: var(--earth); color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 50px; }
+        .psc-body { padding: 28px; }
+        .psc-body h3 { font-size: 1.2rem; font-weight: 800; color: var(--green-deep); margin-bottom: 12px; }
+        .psc-body p { font-size: .9rem; color: var(--ink-muted); line-height: 1.7; }
+        .psc-body ul { margin-top: 16px; margin-left: 16px; list-style: disc; }
+        .psc-body li { font-size: .85rem; color: var(--ink-muted); margin-bottom: 8px; }
+
+        /* CURRICULUM */
+        #curriculum { background: var(--white); }
+        .curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .curriculum-step { background: var(--cream); padding: 32px; border-radius: var(--radius); border-top: 4px solid var(--green-mid); box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+        .curriculum-step h3 { font-size: 1.1rem; font-weight: 800; color: var(--green-deep); margin-bottom: 16px; }
+        .curriculum-step ul { margin-top: 14px; margin-left: 18px; }
+        .curriculum-step li { font-size: .85rem; color: var(--ink-muted); margin-bottom: 10px; line-height: 1.6; }
+        .curriculum-step strong { color: var(--green-mid); font-weight: 700; }
+
+        /* GALLERY */
+        #gallery { background: var(--cream); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 250px; gap: 12px; }
+        .gallery-item { border-radius: 10px; overflow: hidden; background: var(--green-light); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+        .gallery-item img { height: 100%; }
+
+        /* FOOTER */
+        footer { background: var(--green-deep); color: rgba(255,255,255,.55); padding: 48px 0 24px; text-align: center; }
+        footer p { font-size: .85rem; }
+
+        /* ANIMATIONS */
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn .7s ease forwards; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .philosophy-grid, .programs-showcase, .curriculum-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-info-bar { flex-wrap: wrap; gap: 16px; }
+            .hero-info-item { flex: calc(50% - 8px); }
+            .hero-info-divider { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="logo-text">
+        PlayOutside Korea
+        <span>Outdoor Education</span>
+    </div>
+    <div class="nav-links">
+        <a href="index.html#programs">Programs</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#programs" class="mobile-link">Programs</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<header id="hero">
+    <div class="hero-content">
+        <span class="tag">Leadership Program</span>
+        <h1>
+            Lead with <em>Courage.</em><br>
+            Grow through <em>Challenge.</em><br>
+            Discover <em>Korea's Wild.</em>
+        </h1>
+        <p>
+            True leadership is forged not in classrooms but on trails. Through multi-day outdoor challenges in Korea's mountains, participants build the decision-making, teamwork, and self-reliance that define lifelong leaders.
+        </p>
+
+        <div class="hero-info-bar">
+            <div class="hero-info-item">
+                <span class="hero-info-icon">📅</span>
+                <div>
+                    <div class="hero-info-label">Duration</div>
+                    <div class="hero-info-value">1–4 Days</div>
+                </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">👥</span>
+                <div>
+                    <div class="hero-info-label">Group Size</div>
+                    <div class="hero-info-value">4–10 People</div>
+                </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">📍</span>
+                <div>
+                    <div class="hero-info-label">Location</div>
+                    <div class="hero-info-value">Korean Mountains</div>
+                </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">✉️</span>
+                <div>
+                    <div class="hero-info-label">Consultation</div>
+                    <div class="hero-info-value">Free</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+    <div class="container">
+        <div class="section-header">
+            <h2>Three Pillars of Outdoor Leadership</h2>
+        </div>
+        <div class="philosophy-grid fade-in">
+            <div class="philosophy-text">
+                <h3>Why Outdoors? Why Korea?</h3>
+                <p>
+                    Korea's mountain trails are living classrooms. Every steep ridge, river crossing, and foggy summit demands <strong>real decisions with real consequences</strong> — the kind that build genuine leadership, not just confidence in theory.
+                </p>
+                <p>
+                    Working together to navigate unfamiliar terrain, participants discover how to <strong>communicate under pressure, support each other, and lead with empathy</strong> — skills that transfer directly back to school, work, and life.
+                </p>
+                <p>
+                    Leaving behind devices and distractions, participants reconnect with a slower, more deliberate pace. This <strong>analogue experience</strong> builds clarity, resilience, and a deeper sense of self.
+                </p>
+            </div>
+            <div class="philosophy-pills">
+                <div class="pill">
+                    <h4>🧭 Decision-Making Under Pressure</h4>
+                    <p>Real terrain demands real choices. Participants practice risk assessment and judgment in a safe, guided environment.</p>
+                </div>
+                <div class="pill">
+                    <h4>🤝 Team Dynamics & Communication</h4>
+                    <p>From route planning to load-sharing, every task requires collaboration, listening, and trust.</p>
+                </div>
+                <div class="pill">
+                    <h4>💪 Self-Reliance & Resilience</h4>
+                    <p>Push through fatigue, weather, and uncertainty — and discover what you're actually capable of.</p>
+                </div>
+                <div class="pill">
+                    <h4>🌱 Leave No Trace Ethics</h4>
+                    <p>Responsible outdoor leadership means protecting the natural spaces we learn in for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+    <div class="container">
+        <div class="section-header">
+            <h2>Program Options</h2>
+            <p>Choose the format that fits your group's goals and schedule.</p>
+        </div>
+        <div class="programs-showcase fade-in">
+            <div class="program-showcase-card">
+                <div class="psc-img">
+                    <img src="./photo/플레이아웃사이드2.JPG" alt="Day hike leadership program Korea" loading="lazy">
+                    <span class="psc-badge">1–2 Days</span>
+                </div>
+                <div class="psc-body">
+                    <h3>Day & Overnight Challenge</h3>
+                    <p>An intensive introduction to outdoor leadership. Perfect for school groups, corporate teams, or first-time participants.</p>
+                    <ul>
+                        <li><strong>Trail Navigation:</strong> Map reading, route planning, and decision-making on the move</li>
+                        <li><strong>Team Challenges:</strong> Structured activities designed to surface leadership dynamics</li>
+                        <li><strong>Debrief Sessions:</strong> Guided reflection connecting outdoor experience to real-life leadership</li>
+                        <li><strong>Duration:</strong> 1 full day or 1 night / 2 days</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="program-showcase-card">
+                <div class="psc-img">
+                    <img src="./photo/플레이아웃사이드5.JPG" alt="Multi-day leadership expedition Korea" loading="lazy">
+                    <span class="psc-badge">3–4 Days</span>
+                </div>
+                <div class="psc-body">
+                    <h3>Leadership Expedition</h3>
+                    <p>Our flagship multi-day residential program. Participants rotate leadership roles, manage group decisions, and develop genuine outdoor competence. Ideal for DofE Expeditions.</p>
+                    <ul>
+                        <li><strong>Expedition Planning:</strong> Participants co-design the itinerary and carry full responsibility</li>
+                        <li><strong>Overnight Camping:</strong> Lightweight backpacking with off-grid bivouac nights</li>
+                        <li><strong>Leadership Journal:</strong> Daily reflection to consolidate growth and insights</li>
+                        <li><strong>Duration:</strong> 3–4 days (customizable)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+    <div class="container">
+        <div class="section-header">
+            <h2>What Participants Learn</h2>
+            <p>A structured outdoor curriculum designed to build real-world leadership skills.</p>
+        </div>
+        <div class="curriculum-grid fade-in">
+            <div class="curriculum-step">
+                <div style="height: 180px; margin: -32px -32px 20px -32px; border-radius: 14px 14px 0 0; overflow: hidden;">
+                    <img src="./photo/플레이아웃사이드13.jpeg" alt="Navigation and planning" loading="lazy" style="height: 100%; object-fit: cover;">
+                </div>
+                <h3>① Planning & Navigation</h3>
+                <ul>
+                    <li><strong>Map & Compass:</strong> Terrain reading, route selection, and bearing</li>
+                    <li><strong>Risk Assessment:</strong> Identifying hazards and making safe group decisions</li>
+                    <li><strong>Contingency Planning:</strong> Preparing for weather changes and unexpected situations</li>
+                </ul>
+            </div>
+            <div class="curriculum-step">
+                <div style="height: 180px; margin: -32px -32px 20px -32px; border-radius: 14px 14px 0 0; overflow: hidden;">
+                    <img src="./photo/플레이아웃사이드17.jpeg" alt="Team leadership dynamics" loading="lazy" style="height: 100%; object-fit: cover;">
+                </div>
+                <h3>② Team Leadership</h3>
+                <ul>
+                    <li><strong>Role Rotation:</strong> Every participant leads a section of the expedition</li>
+                    <li><strong>Communication:</strong> Clear, calm, and effective communication under physical stress</li>
+                    <li><strong>Conflict Resolution:</strong> Managing group tension and reaching shared decisions</li>
+                </ul>
+            </div>
+            <div class="curriculum-step">
+                <div style="height: 180px; margin: -32px -32px 20px -32px; border-radius: 14px 14px 0 0; overflow: hidden;">
+                    <img src="./photo/플레이아웃사이드21.jpeg" alt="Campsite and survival skills" loading="lazy" style="height: 100%; object-fit: cover;">
+                </div>
+                <h3>③ Outdoor Living Skills</h3>
+                <ul>
+                    <li><strong>Camp Setup:</strong> Shelter selection, tent pitching, and site management</li>
+                    <li><strong>Trail Cooking:</strong> Lightweight meal preparation and nutrition on the move</li>
+                    <li><strong>LNT Practice:</strong> Leave No Trace ethics applied throughout the expedition</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2>On the Trail</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드3.JPG" alt="Youth outdoor leadership activity" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드4.JPG" alt="Group hiking Korea" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드6.JPG" alt="Team challenge outdoor" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드11.jpeg" alt="Leadership program Korea" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드19.jpeg" alt="Outdoor education Korea" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드24.jpeg" alt="Korean mountain trail" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section style="background: var(--green-deep); color: var(--white); text-align: center; padding: 80px 5%;">
+    <div class="container fade-in">
+        <h2 style="color: var(--white); margin-bottom: 16px;">Ready to Lead?</h2>
+        <p style="color: rgba(255,255,255,.8); margin-bottom: 32px;">
+            Book a Day Challenge, apply for the Leadership Expedition, or request a custom program for your school or group.
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">Get in Touch →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>© 2026 PlayOutside Korea | <strong>Youth Outdoor Leadership Program</strong></p>
+        <p style="margin-top: 8px; font-size: .75rem;">PlayOutside Korea · Outdoor Education Cooperative</p>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const toggleMenu = () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    };
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => { entry.target.style.animation = 'fadeIn .7s ease forwards'; }, i * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
