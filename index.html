@@ -325,8 +325,8 @@
         }
         .tab-btn.active { background: var(--green-mid); color: var(--white); }
 
-        .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-        .prog-panel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .programs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+        .prog-panel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
 
         .program-card {
             background: var(--white);
@@ -521,6 +521,7 @@
         /* ── RESPONSIVE ────────────────────────────────────── */
         @media (max-width: 1024px) {
             .programs-grid, .prog-panel.active { grid-template-columns: repeat(2, 1fr); }
+            .prog-panel { grid-template-columns: repeat(2, 1fr); }
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
@@ -820,6 +821,29 @@
                         <div class="meta-item">
                             <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                             2–3 days
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            4–10 people
+                        </div>
+                    </div>
+                    <a href="#contact" class="card-link">Contact Us →</a>
+                </div>
+            </div>
+        </div>
+
+            <div class="program-card fade-in">
+                <div class="program-card-img">
+                    <img src="./photo/플레이아웃사이드7.JPG" alt="Rock climbing Korea outdoor education" loading="lazy">
+                    <span class="prog-badge">Climbing</span>
+                </div>
+                <div class="program-card-body">
+                    <h3>Rock Climbing Korea</h3>
+                    <p>Experience Korea's dramatic rock faces through guided climbing sessions. Build confidence, problem-solving skills, and trust through vertical challenges in Korea's natural environment.</p>
+                    <div class="program-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            1–2 days
                         </div>
                         <div class="meta-item">
                             <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
