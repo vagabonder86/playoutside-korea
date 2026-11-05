@@ -951,7 +951,7 @@
             </div>
 
             <div class="contact-form fade-in">
-                <form action="https://formspree.io/f/mlgzyzwj" method="POST">
+                <form id="inquiry-form" action="https://formspree.io/f/mlgzyzwj" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -967,9 +967,10 @@
                             <label for="program">Program Interest</label>
                             <select id="program" name="program" required>
                                 <option value="" disabled selected>Select a program</option>
-                                <option>The Night in Woods</option>
-                                <option>The Flow on River - Canoe Academy</option>
                                 <option>Youth Outdoor Leadership</option>
+                                <option>The Flow on River - Canoe Academy</option>
+                                <option>The Night in Woods</option>
+                                <option>Rock Climbing Korea</option>
                                 <option value="custom">Custom Program Request</option>
                             </select>
                         </div>
@@ -989,6 +990,7 @@
                         <textarea id="message" name="message" placeholder="Tell us about your goals, preferred dates, or any questions you have..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary form-submit">Send Inquiry →</button>
+                    <p id="form-status" role="status" style="margin-top: 14px; font-size: .9rem; text-align: center;"></p>
                 </form>
             </div>
         </div>
@@ -1116,6 +1118,33 @@
         });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const inquiryForm = document.getElementById('inquiry-form');
+    const formStatus = document.getElementById('form-status');
+    inquiryForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = inquiryForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        formStatus.style.color = 'var(--ink-muted)';
+        formStatus.textContent = 'Sending…';
+        try {
+            const res = await fetch(inquiryForm.action, {
+                method: 'POST',
+                body: new FormData(inquiryForm),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (!res.ok) throw new Error();
+            gtag('event', 'generate_lead', { program: inquiryForm.program.value });
+            inquiryForm.reset();
+            formStatus.style.color = 'var(--green-mid)';
+            formStatus.textContent = 'Thank you! Your inquiry has been sent. We will be in touch soon.';
+        } catch {
+            formStatus.style.color = '#B3261E';
+            formStatus.textContent = 'Sorry, something went wrong. Please email playoutside.edu@gmail.com.';
+        } finally {
+            btn.disabled = false;
+        }
+    });
 
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('dragstart', e => e.preventDefault());
