@@ -212,7 +212,8 @@
         /* GALLERY */
         #gallery { background: var(--cream); }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 250px; gap: 12px; }
-        .gallery-item { border-radius: 10px; overflow: hidden; background: var(--green-light); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+        .gallery-item { position: relative; margin: 0; border-radius: 10px; overflow: hidden; background: var(--green-light); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+        .gallery-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 14px 10px; background: linear-gradient(transparent, rgba(0,0,0,.6)); color: var(--white); font-size: .8rem; font-weight: 600; }
         .gallery-item img { height: 100%; }
 
         /* FOOTER */
@@ -235,6 +236,21 @@
             .hero-info-divider { display: none; }
         }
     </style>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Youth Outdoor Leadership",
+      "description": "Multi-day outdoor leadership program in Korea's mountains for groups of 4–10, building decision-making, teamwork, and self-reliance through hiking and outdoor challenges.",
+      "url": "https://playoutsidekorea.com/youth-outdoor-leadership.html",
+      "provider": {
+        "@id": "https://playoutsidekorea.com/#org",
+        "@type": "Organization",
+        "name": "PlayOutside Korea",
+        "url": "https://playoutsidekorea.com/"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -311,7 +327,7 @@
 <section id="philosophy">
     <div class="container">
         <div class="section-header">
-            <h2>Three Pillars of Outdoor Leadership</h2>
+            <h2>Four Pillars of Outdoor Leadership</h2>
         </div>
         <div class="philosophy-grid fade-in">
             <div class="philosophy-text">
@@ -454,24 +470,30 @@
             <h2>On the Trail</h2>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item fade-in">
-                <img src="./photo/플레이아웃사이드3.JPG" alt="Youth outdoor leadership activity" loading="lazy">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="./photo/플레이아웃사이드4.JPG" alt="Group hiking Korea" loading="lazy">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="./photo/플레이아웃사이드6.JPG" alt="Team challenge outdoor" loading="lazy">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="./photo/플레이아웃사이드11.jpeg" alt="Leadership program Korea" loading="lazy">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="./photo/플레이아웃사이드19.jpeg" alt="Outdoor education Korea" loading="lazy">
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="./photo/플레이아웃사이드24.jpeg" alt="Korean mountain trail" loading="lazy">
-            </div>
+            <figure class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드3.JPG" alt="Participant resting on a rocky outcrop beside a mountain trail" loading="lazy">
+                <figcaption>A pause on the ridge</figcaption>
+            </figure>
+            <figure class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드4.JPG" alt="Backpacker with trekking poles resting on a rock above the valley" loading="lazy">
+                <figcaption>Earning the view</figcaption>
+            </figure>
+            <figure class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드6.JPG" alt="Group celebrating together on a rocky summit" loading="lazy">
+                <figcaption>Summit, together</figcaption>
+            </figure>
+            <figure class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드11.jpeg" alt="Students with camouflage face paint in the forest" loading="lazy">
+                <figcaption>Forest skills day</figcaption>
+            </figure>
+            <figure class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드19.jpeg" alt="Group gathered around campfires at night" loading="lazy">
+                <figcaption>Evening debrief by the fire</figcaption>
+            </figure>
+            <figure class="gallery-item fade-in">
+                <img src="./photo/플레이아웃사이드24.jpeg" alt="Students reading a map during a trail navigation break" loading="lazy">
+                <figcaption>Navigating as a team</figcaption>
+            </figure>
         </div>
     </div>
 </section>
@@ -491,7 +513,7 @@
 <footer>
     <div class="container">
         <p>© 2026 PlayOutside Korea | <strong>Youth Outdoor Leadership Program</strong></p>
-        <p style="margin-top: 8px; font-size: .75rem;">PlayOutside Korea · Outdoor Education Cooperative</p>
+        <p style="margin-top: 8px; font-size: .75rem;">PlayOutside Korea · <a href="index.html#about" style="text-decoration: underline;">An outdoor education cooperative</a></p>
     </div>
 </footer>
 
