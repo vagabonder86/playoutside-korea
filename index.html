@@ -564,6 +564,24 @@
             .gallery-item.wide { grid-column: span 1; }
             .hero-stats { flex-wrap: wrap; }
         }
+        /* ── FIELD NOTES (RECAPS) ── */
+        #field-notes { padding: 100px 0; background: var(--cream); }
+        .fn-header { text-align: center; margin-bottom: 48px; }
+        .fn-header .section-label { justify-content: center; }
+        .fn-header h2 { font-size: 2.4rem; font-weight: 800; color: var(--green-deep); margin-bottom: 12px; }
+        .fn-header p { color: var(--ink-muted); max-width: 640px; margin-inline: auto; }
+        .fn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .fn-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.06); transition: all var(--transition); display: block; }
+        .fn-card:hover { transform: translateY(-6px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+        .fn-img { aspect-ratio: 16 / 9; overflow: hidden; position: relative; }
+        .fn-img img { height: 100%; object-fit: cover; }
+        .fn-badge { position: absolute; top: 14px; left: 14px; background: var(--earth); color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 50px; }
+        .fn-body { padding: 26px 28px 30px; }
+        .fn-date { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--green-light); margin-bottom: 8px; }
+        .fn-body h3 { font-size: 1.25rem; font-weight: 800; color: var(--green-deep); margin-bottom: 10px; }
+        .fn-body p { font-size: .92rem; color: var(--ink-muted); line-height: 1.7; margin-bottom: 14px; }
+        .fn-more { font-family: 'Montserrat', sans-serif; font-size: .85rem; font-weight: 700; color: var(--green-mid); }
+        @media (max-width: 768px) { .fn-grid { grid-template-columns: 1fr; } .fn-header h2 { font-size: 1.9rem; } }
     </style>
     <script type="application/ld+json">
 {
@@ -881,6 +899,37 @@
     </div>
 </section>
 
+<!-- ══ FIELD NOTES (RECAPS) ═════════════════════════════════ -->
+<section id="field-notes">
+    <div class="container">
+        <div class="fn-header fade-in">
+            <div class="section-label">Field Notes</div>
+            <h2>Backpacking School Recaps</h2>
+            <p>One backpack, two days, real skills. See what happened on our latest Backpacking School trips.</p>
+        </div>
+        <div class="fn-grid">
+            <a class="fn-card fade-in" href="./backpacking-school.html#jirisan">
+                <div class="fn-img"><img src="./photo/backpacking/jirisan-04-terraces.jpg" alt="A hiker beside golden rice terraces on the Jirisan Dulle-gil" loading="lazy"><span class="fn-badge">Recap 01</span></div>
+                <div class="fn-body">
+                    <div class="fn-date">Oct 3–4, 2026 · Sancheong</div>
+                    <h3>Backpacking School in Jirisan</h3>
+                    <p>Two days on the Jirisan Dulle-gil: past golden rice terraces, collecting trail stamps, and a night in the forest.</p>
+                    <span class="fn-more">Read the recap →</span>
+                </div>
+            </a>
+            <a class="fn-card fade-in" href="./backpacking-school.html#hongseong">
+                <div class="fn-img"><img src="./photo/backpacking/hongseong-01-ridge.jpg" alt="View from the Baekwolsan ridge in Hongseong" loading="lazy"><span class="fn-badge">Recap 02</span></div>
+                <div class="fn-body">
+                    <div class="fn-date">Nov 4–5, 2026 · Hongseong</div>
+                    <h3>Backpacking School: Field Edition</h3>
+                    <p>Weighing packs, pitching tents by hand, and a night at the shelter on Section 10 of the East–West Trail.</p>
+                    <span class="fn-more">Read the recap →</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- ══ GALLERY ═══════════════════════════════════════════════ -->
 <section id="gallery">
     <div class="container">
@@ -1037,6 +1086,7 @@
                     <li><a href="./canoe-tour.html">The Flow on River – Canoe Academy</a></li>
                     <li><a href="#programs">The Night in Woods</a></li>
                     <li><a href="#programs">Rock Climbing Korea</a></li>
+                    <li><a href="./backpacking-school.html">Backpacking School Recaps</a></li>
                 </ul>
             </div>
             <div class="footer-col">

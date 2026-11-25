@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpacking School Recaps | Jirisan & Hongseong | PlayOutside Korea</title>
+    <meta name="description" content="Field notes from PlayOutside Korea's Backpacking School: two days on the Jirisan Dulle-gil in Sancheong (Oct 3–4, 2026) and a field edition on the East–West Trail in Hongseong (Nov 4–5, 2026).">
+    <meta name="keywords" content="backpacking Korea, backpacking school Korea, Jirisan backpacking, Jirisan Dulle-gil, East-West Trail Korea, Hongseong, outdoor education Korea, PlayOutside Korea">
+    <link rel="canonical" href="https://playoutsidekorea.com/backpacking-school.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://playoutsidekorea.com/backpacking-school.html">
+    <meta property="og:title" content="Backpacking School Recaps | Jirisan & Hongseong | PlayOutside Korea">
+    <meta property="og:description" content="Field notes from PlayOutside Korea's Backpacking School: two days on the Jirisan Dulle-gil in Sancheong (Oct 3–4, 2026) and a field edition on the East–West Trail in Hongseong (Nov 4–5, 2026).">
+    <meta property="og:image" content="https://playoutsidekorea.com/photo/backpacking/og-backpacking.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="PlayOutside Korea">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6PGJPWHT1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T6PGJPWHT1');
+    </script>
+
+    <link rel="icon" type="image/png" href="./photo/logo.png">
+    <link rel="apple-touch-icon" href="./photo/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-deep:   #0F2818;
+            --green-mid:    #1F5A3B;
+            --green-light:  #3A8659;
+            --earth:        #6B4423;
+            --earth-light:  #D4AF8A;
+            --stone:        #8A8A7E;
+            --cream:        #FAFAF8;
+            --white:        #FFFFFF;
+            --ink:          #0A0A0A;
+            --ink-muted:    #666;
+            --radius:       14px;
+            --transition:   0.35s ease;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.2; }
+        img { display: block; width: 100%; object-fit: cover; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { width: min(90%, 1160px); margin-inline: auto; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .88rem; font-weight: 700;
+            letter-spacing: .04em;
+            transition: all var(--transition);
+            cursor: pointer; border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+        .btn-primary {
+            background: var(--green-mid); color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--green-deep);
+            box-shadow: 0 8px 28px rgba(31,90,59,.4);
+            transform: translateY(-3px);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 999;
+            padding: 0 5%;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            transition: box-shadow var(--transition);
+        }
+        nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+        .logo-wrap { display: flex; align-items: center; gap: 10px; }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); line-height: 1.1; }
+        .logo-text span { display: block; font-size: .62rem; font-weight: 600; color: var(--stone); letter-spacing: .12em; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 36px; }
+        .nav-links a { font-size: .88rem; font-weight: 500; color: var(--ink-muted); transition: color var(--transition); }
+        .nav-links a:hover { color: var(--green-mid); }
+        .nav-cta { font-size: .82rem !important; font-weight: 700 !important; background: var(--green-mid); color: var(--white) !important; padding: 9px 20px; border-radius: 50px; }
+        .nav-cta:hover { background: var(--green-deep); color: var(--white) !important; }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: all var(--transition); }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu {
+            display: none; position: fixed; top: 72px; left: 0; right: 0;
+            background: var(--white); padding: 24px 5% 32px;
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            box-shadow: 0 12px 32px rgba(0,0,0,.08);
+            z-index: 998;
+        }
+        .mobile-menu.open { display: flex; flex-direction: column; gap: 20px; }
+        .mobile-menu a { font-size: 1rem; font-weight: 600; color: var(--ink); }
+
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--green-deep) 0%, #0F4A2E 100%);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            padding: 72px 5% 0;
+            text-align: center; color: var(--white);
+            position: relative; overflow: hidden;
+        }
+        #hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,50 Q25,40 50,50 T100,50" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="0.5"/></svg>');
+            opacity: 0.3;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 60px 20px; }
+        .hero-content .tag {
+            display: inline-block;
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            color: var(--earth-light);
+            font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 6px 14px; border-radius: 50px;
+            margin-bottom: 24px;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 900;
+            line-height: 1.08;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,.15);
+        }
+        .hero-content h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--earth-light), #E8C9A0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,.8);
+            line-height: 1.75;
+            margin-bottom: 32px;
+        }
+
+        /* SECTION STYLING */
+        section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 {
+            font-size: 2.4rem; font-weight: 800;
+            color: var(--green-deep); margin-bottom: 16px;
+        }
+        .section-header p {
+            color: var(--ink-muted); max-width: 700px;
+            margin-inline: auto; font-size: 1rem;
+        }
+
+        /* PHILOSOPHY */
+        #philosophy { background: var(--white); }
+        .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .philosophy-text h3 { font-size: 1.4rem; color: var(--green-deep); margin-bottom: 20px; font-weight: 800; }
+        .philosophy-text p { margin-bottom: 18px; color: var(--ink-muted); line-height: 1.8; }
+        .philosophy-text strong { color: var(--green-mid); font-weight: 700; }
+        .philosophy-pills { display: flex; flex-direction: column; gap: 18px; }
+        .pill {
+            background: var(--cream);
+            padding: 20px 24px; border-radius: 10px;
+            border-left: 4px solid var(--green-mid);
+            box-shadow: 0 2px 8px rgba(0,0,0,.03);
+        }
+        .pill h4 { font-size: .95rem; font-weight: 800; color: var(--green-deep); margin-bottom: 8px; }
+        .pill p { font-size: .85rem; color: var(--ink-muted); margin: 0; line-height: 1.6; }
+
+        /* PROGRAMS */
+        #programs { background: var(--cream); }
+        .programs-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .program-showcase-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,.06);
+            transition: all var(--transition);
+        }
+        .program-showcase-card:hover { transform: translateY(-6px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .psc-img { height: 280px; background: var(--green-light); position: relative; overflow: hidden; }
+        .psc-img img { height: 100%; object-fit: cover; }
+        .psc-badge { position: absolute; top: 14px; left: 14px; background: var(--earth); color: var(--white); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 50px; }
+        .psc-body { padding: 28px; }
+        .psc-body h3 { font-size: 1.2rem; font-weight: 800; color: var(--green-deep); margin-bottom: 12px; }
+        .psc-body p { font-size: .9rem; color: var(--ink-muted); line-height: 1.7; }
+        .psc-body ul { margin-top: 16px; margin-left: 16px; list-style: disc; }
+        .psc-body li { font-size: .85rem; color: var(--ink-muted); margin-bottom: 8px; }
+
+        /* CURRICULUM */
+        #curriculum { background: var(--white); }
+        .curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .curriculum-step {
+            background: var(--cream);
+            padding: 32px;
+            border-radius: var(--radius);
+            border-top: 4px solid var(--green-mid);
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+        }
+        .curriculum-step h3 {
+            font-size: 1.1rem; font-weight: 800;
+            color: var(--green-deep); margin-bottom: 16px;
+        }
+        .curriculum-step p { font-size: .9rem; color: var(--ink-muted); line-height: 1.7; }
+        .curriculum-step ul { margin-top: 14px; margin-left: 18px; }
+        .curriculum-step li {
+            font-size: .85rem; color: var(--ink-muted);
+            margin-bottom: 10px; line-height: 1.6;
+        }
+        .curriculum-step strong { color: var(--green-mid); font-weight: 700; }
+
+        /* GALLERY */
+        #gallery { background: var(--cream); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 250px;
+            gap: 12px;
+        }
+        .gallery-item {
+            border-radius: 10px; overflow: hidden;
+            background: var(--green-light);
+            box-shadow: 0 2px 8px rgba(0,0,0,.06);
+        }
+        .gallery-item img { height: 100%; }
+
+        /* FOOTER */
+        footer {
+            background: var(--green-deep); color: rgba(255,255,255,.55);
+            padding: 48px 0 24px; text-align: center;
+        }
+        footer p { font-size: .85rem; }
+
+        /* ANIMATIONS */
+        .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn .7s ease forwards; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+        /* HERO INFO BAR */
+        .hero-info-bar {
+            display: flex; align-items: center;
+            margin-top: 36px; padding: 20px 28px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 14px;
+            backdrop-filter: blur(8px);
+            max-width: 700px; margin-inline: auto;
+            margin-top: 36px;
+        }
+        .hero-info-item {
+            display: flex; align-items: center; gap: 12px;
+            flex: 1; justify-content: center;
+        }
+        .hero-info-icon { font-size: 1.3rem; flex-shrink: 0; }
+        .hero-info-label {
+            font-size: .68rem; font-weight: 600;
+            color: rgba(255,255,255,.5);
+            text-transform: uppercase; letter-spacing: .08em;
+            margin-bottom: 2px;
+        }
+        .hero-info-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .9rem; font-weight: 700;
+            color: var(--white);
+        }
+        .hero-info-divider {
+            width: 1px; height: 36px;
+            background: rgba(255,255,255,.15);
+            margin: 0 4px; flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .hero-info-bar { flex-wrap: wrap; gap: 16px; padding: 16px; }
+            .hero-info-item { flex: calc(50% - 8px); }
+            .hero-info-divider { display: none; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .philosophy-grid, .programs-showcase, .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+            .hero-content h1 { font-size: 2rem; }
+        }
+
+        /* BACKPACKING RECAPS */
+        #hero.bp-hero {
+            min-height: 88vh;
+            background: linear-gradient(180deg, rgba(15,40,24,.55) 0%, rgba(15,40,24,.85) 100%),
+                        url('./photo/backpacking/jirisan-04-terraces.jpg') center/cover no-repeat;
+        }
+        #intro { background: var(--white); }
+        .intro-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .recap-nav { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+        .recap-nav a {
+            background: var(--cream); border: 1px solid rgba(31,90,59,.2); color: var(--green-mid);
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .85rem;
+            padding: 12px 24px; border-radius: 50px; transition: all var(--transition);
+        }
+        .recap-nav a:hover { background: var(--green-mid); color: var(--white); }
+        .recap { background: var(--cream); }
+        .recap.alt { background: var(--white); }
+        .recap-head { text-align: center; margin-bottom: 56px; }
+        .recap-kicker {
+            display: inline-block; background: var(--earth); color: var(--white);
+            font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+            padding: 6px 14px; border-radius: 50px; margin-bottom: 18px;
+        }
+        .recap-head h2 { font-size: 2.4rem; font-weight: 800; color: var(--green-deep); margin-bottom: 12px; }
+        .recap-meta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+        .recap-meta span {
+            background: rgba(58,134,89,.12); color: var(--green-deep);
+            font-size: .82rem; font-weight: 600; padding: 6px 14px; border-radius: 50px;
+        }
+        .recap-head p { color: var(--ink-muted); max-width: 720px; margin-inline: auto; }
+        .story { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; margin-bottom: 64px; }
+        .story:nth-child(even) .story-img { order: 2; }
+        .story-img { border-radius: var(--radius); overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,.1); aspect-ratio: 16 / 10; }
+        .story-img img { height: 100%; }
+        .story-step { font-family: 'Montserrat', sans-serif; font-size: .75rem; font-weight: 800; letter-spacing: .14em; color: var(--green-light); text-transform: uppercase; margin-bottom: 10px; }
+        .story-text h3 { font-size: 1.5rem; font-weight: 800; color: var(--green-deep); margin-bottom: 14px; }
+        .story-text p { color: var(--ink-muted); line-height: 1.8; }
+        .story-text strong { color: var(--green-mid); }
+        .learned { background: var(--white); border-radius: var(--radius); padding: 36px; box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+        .recap.alt .learned { background: var(--cream); }
+        .learned h3 { font-size: 1.15rem; font-weight: 800; color: var(--green-deep); margin-bottom: 20px; text-align: center; }
+        .learned-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 28px; }
+        .learned-grid div { font-size: .9rem; color: var(--ink-muted); padding-left: 16px; border-left: 3px solid var(--green-light); }
+        .learned-grid b { display: block; color: var(--green-deep); font-size: .92rem; margin-bottom: 2px; }
+        @media (max-width: 900px) {
+            .intro-grid { grid-template-columns: 1fr 1fr; }
+            .story { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+            .story:nth-child(even) .story-img { order: 0; }
+            .learned-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) { .intro-grid { grid-template-columns: 1fr; } .recap-head h2 { font-size: 1.9rem; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "PlayOutside Korea Backpacking School recaps",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "item": {"@type": "Event", "name": "Backpacking School in Jirisan",
+          "startDate": "2026-10-03", "endDate": "2026-10-04", "eventStatus": "https://schema.org/EventScheduled",
+          "location": {"@type": "Place", "name": "Jirisan Dulle-gil, Sancheong", "address": "Sancheong-gun, Gyeongsangnam-do, South Korea"},
+          "organizer": {"@type": "Organization", "name": "PlayOutside Korea", "url": "https://playoutsidekorea.com/"}}},
+        {"@type": "ListItem", "position": 2, "item": {"@type": "Event", "name": "Backpacking School: Field Edition in Hongseong",
+          "startDate": "2026-11-04", "endDate": "2026-11-05", "eventStatus": "https://schema.org/EventScheduled",
+          "location": {"@type": "Place", "name": "Baekwolsan, East–West Trail Section 10", "address": "Hongseong-gun, Chungcheongnam-do, South Korea"},
+          "organizer": {"@type": "Organization", "name": "PlayOutside Korea", "url": "https://playoutsidekorea.com/"}}}
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="logo-wrap">
+        <a href="index.html" class="logo-text">
+            PlayOutside Korea
+            <span>Outdoor Education</span>
+        </a>
+    </div>
+    <div class="nav-links">
+        <a href="index.html#programs">Programs</a>
+        <a href="#jirisan">Jirisan</a>
+        <a href="#hongseong">Hongseong</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#programs" class="mobile-link">Programs</a>
+    <a href="#jirisan" class="mobile-link">Jirisan recap</a>
+    <a href="#hongseong" class="mobile-link">Hongseong recap</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<header id="hero" class="bp-hero">
+    <div class="hero-content">
+        <span class="tag">Backpacking School · Field Notes 2026</span>
+        <h1>One backpack.<br><em>Two days.</em><br>Real skills.</h1>
+        <p>
+            Recaps from our Backpacking School this autumn: the Jirisan Dulle-gil in Sancheong,
+            and a field edition on the East–West Trail in Hongseong.
+        </p>
+        <div class="hero-info-bar">
+            <div class="hero-info-item">
+                <span class="hero-info-icon">🎒</span>
+                <div><div class="hero-info-label">Format</div><div class="hero-info-value">1 Night 2 Days</div></div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">📍</span>
+                <div><div class="hero-info-label">Where</div><div class="hero-info-value">Jirisan · Hongseong</div></div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">📅</span>
+                <div><div class="hero-info-label">When</div><div class="hero-info-value">Oct · Nov 2026</div></div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+                <span class="hero-info-icon">🗓️</span>
+                <div><div class="hero-info-label">Next</div><div class="hero-info-value">Custom dates</div></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- INTRO -->
+<section id="intro">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2>What is Backpacking School?</h2>
+            <p>Everything you need for two days goes into one backpack. We walk together, camp in the forest,
+               and practice the skills that make backpacking safe, light and respectful of nature.</p>
+        </div>
+        <div class="intro-grid">
+            <div class="pill fade-in"><h4>🎒 Pack light</h4><p>Choose what to carry, and what to leave behind.</p></div>
+            <div class="pill fade-in"><h4>⛺ Pitch your own</h4><p>Every participant sets up their own tent and ties their own knots.</p></div>
+            <div class="pill fade-in"><h4>🥾 Walk together</h4><p>Find your own pace, then the pace of the group.</p></div>
+            <div class="pill fade-in"><h4>🌱 Leave No Trace</h4><p>Leave every site the way we found it.</p></div>
+        </div>
+        <div class="recap-nav fade-in">
+            <a href="#jirisan">Recap 01 · Jirisan (Oct 3–4) ↓</a>
+            <a href="#hongseong">Recap 02 · Hongseong (Nov 4–5) ↓</a>
+        </div>
+    </div>
+</section>
+
+<!-- RECAP 01 · JIRISAN -->
+<section id="jirisan" class="recap">
+    <div class="container">
+        <div class="recap-head fade-in">
+            <span class="recap-kicker">Recap 01</span>
+            <h2>Backpacking School in Jirisan</h2>
+            <div class="recap-meta"><span>📅 Oct 3–4, 2026</span><span>📍 Sancheong, Gyeongnam</span><span>🥾 Jirisan Dulle-gil</span></div>
+            <p>Walk, eat, sleep, connect. Two days at the foot of Jirisan with everything we needed in one backpack.</p>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/jirisan-01-circle.jpg" alt="Participants sitting in a circle on the grass for orientation" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Gather</div>
+                <h3>We started in a circle</h3>
+                <p>On the first morning we sat in a circle on the grass between the tents. We shared names, agreed on the promises we would keep for two days, and went through the safety rules together.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/jirisan-02-gear.jpg" alt="Instructor explaining tents and gear to participants" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Pack</div>
+                <h3>What to bring, and what to leave</h3>
+                <p>In front of the tents and gear we covered the basics: what to pack, what to leave out, and how to load a backpack. Two days in one backpack starts with <strong>carrying less</strong>.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/jirisan-04-terraces.jpg" alt="A hiker on a trail beside golden rice terraces in Sancheong" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Walk</div>
+                <h3>Onto the Jirisan Dulle-gil</h3>
+                <p>With packs on, we headed out onto the Jirisan Dulle-gil. In early October the rice terraces of Sancheong were turning gold, and step by step everyone found their own pace, then <strong>the pace of the group</strong>.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/jirisan-06-stamp.jpg" alt="Hands holding a Jirisan Dulle-gil stamp booklet" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Explore</div>
+                <h3>One stamp at a time</h3>
+                <p>Along the way we collected Dulle-gil trail stamps. Reading the map to find the next stamp point gave the walk its own rhythm.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/jirisan-07-dinner.jpg" alt="Participants serving dinner together at the campsite" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Camp</div>
+                <h3>A night in the forest</h3>
+                <p>At the forest campsite everyone pitched their own tent and learned the knots to hold it. Dinner was a shared table, with stories about the trail, the hard moments and the views.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/jirisan-08-tents.jpg" alt="Tents on the grass in the morning" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 2 · Leave No Trace</div>
+                <h3>Waking up in a tent</h3>
+                <p>We woke to the morning air of the forest, packed up our tents and gear, and returned the site to how we found it. <strong>Leave No Trace</strong> is as basic to backpacking as the backpack itself.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RECAP 02 · HONGSEONG -->
+<section id="hongseong" class="recap alt">
+    <div class="container">
+        <div class="recap-head fade-in">
+            <span class="recap-kicker">Recap 02</span>
+            <h2>Backpacking School: Field Edition</h2>
+            <div class="recap-meta"><span>📅 Nov 4–5, 2026</span><span>📍 Hongseong, Chungnam</span><span>🥾 East–West Trail, Section 10</span></div>
+            <p>For people already backpacking who want to know they are doing it right: a hands-on night on the trail in Hongseong.</p>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/hongseong-02-orientation.jpg" alt="Instructor giving an orientation next to a van" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Gather</div>
+                <h3>Shouldering the pack</h3>
+                <p>We began with an orientation, then put our own backpacks on the scale. Knowing what you carry is the first step to carrying it well.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/hongseong-03-weigh.jpg" alt="A backpack being weighed with a hanging scale" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Gear</div>
+                <h3>First, weigh your pack</h3>
+                <p>Choosing gear, splitting the load and layering for autumn in the mountains. <strong>The basics, done right</strong>, for people who were already backpacking but wanted to be sure.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/hongseong-04-trail.jpg" alt="Backpackers walking a trail with trekking poles" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Trail</div>
+                <h3>Up toward Baekwolsan</h3>
+                <p>We set out toward Baekwolsan and practiced using trekking poles on the way up.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/hongseong-07-shelter.jpg" alt="East–West Trail sign for Section 10, Baekwolsan shelter" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Shelter</div>
+                <h3>Learning at the shelter</h3>
+                <p>At the trail shelter on <strong>Section 10 of the East–West Trail</strong>, we covered core backpacking skills: picking a site, pitching tents, packing, and using stoves safely.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/hongseong-06-tent.jpg" alt="A participant pitching a tent among pine trees" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Day 1 · Camp</div>
+                <h3>Your tent, your hands</h3>
+                <p>Among the pines, everyone set up a tent with their own hands.</p>
+            </div>
+        </div>
+        <div class="story fade-in">
+            <div class="story-img"><img src="./photo/backpacking/hongseong-01-ridge.jpg" alt="View from the Baekwolsan ridge over Hongseong" loading="lazy"></div>
+            <div class="story-text">
+                <div class="story-step">Ridge</div>
+                <h3>On the ridge</h3>
+                <p>From the Baekwolsan ridge, the autumn fields of Hongseong opened up below us.</p>
+            </div>
+        </div>
+        <div class="learned fade-in">
+            <h3>What we practiced</h3>
+            <div class="learned-grid">
+                <div><b>Gear</b>Choosing and using a tent, sleeping bag and mat</div>
+                <div><b>Route planning</b>Picking a route for your fitness and the season</div>
+                <div><b>Packing &amp; layering</b>Splitting the load and dressing for autumn</div>
+                <div><b>Tent &amp; camp</b>Choosing a site and pitching your own tent</div>
+                <div><b>Stove safety</b>Using stoves and lanterns safely</div>
+                <div><b>Trail etiquette</b>Leave No Trace, practiced together</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section style="background: var(--green-deep); color: var(--white); text-align: center; padding: 80px 5%;">
+    <div class="container fade-in">
+        <h2 style="color: var(--white); margin-bottom: 16px;">Join the Next Backpacking School</h2>
+        <p style="color: rgba(255,255,255,.8); margin-bottom: 32px;">
+            We run Backpacking School for schools, universities, companies and groups of friends, on dates that work for you.
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">Get in Touch →</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>© 2026 PlayOutside Korea | <strong>Backpacking School</strong></p>
+        <p style="margin-top: 8px; font-size: .75rem;">PlayOutside Korea · <a href="index.html#about" style="text-decoration: underline;">An outdoor education cooperative</a></p>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const toggleMenu = () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    };
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+        });
+    });
+
+    /* Fade-in on scroll (IntersectionObserver) */
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.animation = 'fadeIn .7s ease forwards';
+                }, i * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+
+</body>
+</html>
