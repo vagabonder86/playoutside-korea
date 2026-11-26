@@ -24,4 +24,28 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://playoutsidekorea.com/review-east-west-trail-hongseong.html</loc>
+        <lastmod>2026-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://playoutsidekorea.com/review-jirisan-dulle-gil-sancheong.html</loc>
+        <lastmod>2026-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://playoutsidekorea.com/guide-overnight-hike-packing-list.html</loc>
+        <lastmod>2026-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://playoutsidekorea.com/guide-leave-no-trace-korea.html</loc>
+        <lastmod>2026-11-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
