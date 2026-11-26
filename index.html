@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="en">
-    <title>Youth Outdoor Leadership Korea | Outdoor Education | PlayOutside Korea</title>
-    <meta name="description" content="Youth outdoor leadership and outdoor education in Korea for international schools and expats. Multi-day hiking, camping, canoe, and climbing programs that build teamwork, decision-making, and self-reliance in Korea's mountains and rivers.">
+    <title>Outdoor Education in Korea | Hiking, Backpacking &amp; Canoe | PlayOutside Korea</title>
+    <meta name="description" content="English-led outdoor education in Korea for international schools, organizations and groups: hiking, backpacking, canoe, camping and climbing programs that build teamwork and self-reliance in Korea's mountains and rivers.">
     <meta name="keywords" content="youth outdoor leadership Korea, leadership program Korea, korea outdoor education, outdoor education Korea, korea hiking, korea camping, korea canoe tour, rock climbing Korea, international school Korea outdoor, expat outdoor activities Korea, DofE Korea, PlayOutside Korea">
 
     <link rel="canonical" href="https://playoutsidekorea.com/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://playoutsidekorea.com/">
-    <meta property="og:title" content="Youth Outdoor Leadership Korea | PlayOutside Korea">
-    <meta property="og:description" content="Lead with courage. Grow outside. Multi-day outdoor leadership programs in Korea's mountains for groups of 4–10.">
-    <meta property="og:image" content="https://playoutsidekorea.com/photo/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83%EC%82%AC%EC%9D%B4%EB%93%9C2.JPG">
+    <meta property="og:title" content="Outdoor Education in Korea | Hiking, Backpacking &amp; Canoe | PlayOutside Korea">
+    <meta property="og:description" content="English-led hiking, backpacking, canoe, camping and climbing programs in Korea for international schools, organizations and groups.">
+    <meta property="og:image" content="https://playoutsidekorea.com/photo/og-home.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
@@ -564,6 +564,35 @@
             .gallery-item.wide { grid-column: span 1; }
             .hero-stats { flex-wrap: wrap; }
         }
+        /* ── FAQ ── */
+        #faq { padding: 90px 0; background: var(--white); }
+        .faq-header { text-align: center; margin-bottom: 40px; }
+        .faq-header .section-label { justify-content: center; }
+        .faq-header h2 { font-size: 2.4rem; font-weight: 800; color: var(--green-deep); }
+        .faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--cream); border-radius: 12px; padding: 0 24px; border: 1px solid rgba(0,0,0,.05); }
+        .faq-item summary { cursor: pointer; list-style: none; padding: 20px 28px 20px 0; position: relative; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; color: var(--green-deep); }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.4rem; color: var(--green-mid); }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding: 0 0 20px; color: var(--ink-muted); line-height: 1.75; font-size: .95rem; }
+        @media (max-width: 768px) { .faq-header h2 { font-size: 1.9rem; } }
+
+        /* ── WHO IT'S FOR ── */
+        #who { padding: 90px 0; background: var(--white); }
+        .who-header { text-align: center; margin-bottom: 44px; }
+        .who-header .section-label { justify-content: center; }
+        .who-header h2 { font-size: 2.4rem; font-weight: 800; color: var(--green-deep); margin-bottom: 12px; }
+        .who-header p { color: var(--ink-muted); max-width: 640px; margin-inline: auto; }
+        .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .who-card { background: var(--cream); border-radius: var(--radius); padding: 32px 28px; border-top: 4px solid var(--green-mid); display: flex; flex-direction: column; }
+        .who-card .who-icon { font-size: 2rem; margin-bottom: 14px; }
+        .who-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--green-deep); margin-bottom: 10px; }
+        .who-card p { font-size: .92rem; color: var(--ink-muted); line-height: 1.7; margin-bottom: 18px; flex: 1; }
+        .who-card .who-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .who-card .who-tags span { font-size: .75rem; font-weight: 600; color: var(--green-deep); background: rgba(58,134,89,.12); padding: 4px 12px; border-radius: 50px; }
+        @media (max-width: 900px) { .who-grid { grid-template-columns: 1fr; } .who-header h2 { font-size: 1.9rem; } }
+
         /* ── FIELD NOTES (RECAPS) ── */
         #field-notes { padding: 100px 0; background: var(--cream); }
         .fn-header { text-align: center; margin-bottom: 48px; }
@@ -614,7 +643,8 @@
         <a href="#about">About</a>
         <a href="#programs">Programs</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact" class="nav-cta">Apply Now</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="nav-cta">Contact</a>
     </div>
     <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -625,30 +655,31 @@
     <a href="#about" class="mobile-link">About</a>
     <a href="#programs" class="mobile-link">Programs</a>
     <a href="#gallery" class="mobile-link">Gallery</a>
-    <a href="#contact" class="mobile-link">Apply Now →</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contact" class="mobile-link">Contact →</a>
 </div>
 
 <!-- ══ HERO ═════════════════════════════════════════════════ -->
 <header id="hero">
     <div class="hero-left">
-        <div class="hero-badge">🏔️ Outdoor Leadership Program</div>
+        <div class="hero-badge">🇰🇷 Outdoor Education in Korea · English-led</div>
         <h1>
-            Lead with Courage.<br>
-            Grow <em>Outside.</em>
+            Korea's Outdoors<br>
+            Is Our <em>Classroom.</em>
         </h1>
         <p>
-            Korea's mountains are our classroom. Through multi-day outdoor challenges, we develop the decision-making, teamwork, and self-reliance that define lifelong leaders — in young people who are ready to discover what they are truly capable of.
+            Hiking, backpacking, canoe, camping and climbing programs for international schools, organizations and groups in Korea. Every trip has a learning goal: teamwork, self-reliance and Leave No Trace.
         </p>
         <div class="hero-cta-row">
-            <a href="./youth-outdoor-leadership.html" class="btn btn-outline">View Program →</a>
-            <a href="#contact" class="btn btn-earth">Apply Now →</a>
+            <a href="#programs" class="btn btn-outline">Explore Programs →</a>
+            <a href="https://wa.me/message/T42FN3SMJTH4G1" target="_blank" rel="noopener" data-wa="hero" class="btn btn-earth">Chat on WhatsApp →</a>
         </div>
 
         <div class="hero-info-bar">
             <div class="hero-info-item">
                 <span class="hero-info-icon">📅</span>
                 <div>
-                    <div class="hero-info-label">Program Duration</div>
+                    <div class="hero-info-label">Duration</div>
                     <div class="hero-info-value">1–4 Days</div>
                 </div>
             </div>
@@ -656,32 +687,66 @@
             <div class="hero-info-item">
                 <span class="hero-info-icon">👥</span>
                 <div>
-                    <div class="hero-info-label">Group Size</div>
-                    <div class="hero-info-value">4–10 People</div>
+                    <div class="hero-info-label">For</div>
+                    <div class="hero-info-value">Schools &amp; Groups</div>
                 </div>
             </div>
             <div class="hero-info-divider"></div>
             <div class="hero-info-item">
-                <span class="hero-info-icon">📍</span>
+                <span class="hero-info-icon">🚐</span>
                 <div>
-                    <div class="hero-info-label">Location</div>
-                    <div class="hero-info-value">Korean Mountains</div>
+                    <div class="hero-info-label">Transport</div>
+                    <div class="hero-info-value">Provided or Transit</div>
                 </div>
             </div>
             <div class="hero-info-divider"></div>
             <div class="hero-info-item">
-                <span class="hero-info-icon">✉️</span>
+                <span class="hero-info-icon">🗣️</span>
                 <div>
-                    <div class="hero-info-label">Consultation</div>
-                    <div class="hero-info-value">Free</div>
+                    <div class="hero-info-label">Language</div>
+                    <div class="hero-info-value">English-led</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="hero-right">
-        <img src="./photo/플레이아웃사이드2.JPG" alt="Youth outdoor leadership program Korea mountains" loading="eager" style="object-position: center 40%;">
+        <img src="./photo/플레이아웃사이드2.JPG" alt="Outdoor education group hiking in Korea's mountains" loading="eager" fetchpriority="high" style="object-position: center 40%;">
     </div>
 </header>
+
+<!-- ══ WHO IT'S FOR ══════════════════════════════════════════ -->
+<section id="who">
+    <div class="container">
+        <div class="who-header fade-in">
+            <div class="section-label">Who We Work With</div>
+            <h2>Programs Built Around Your Group</h2>
+            <p>We mainly work with schools, organizations and groups, and we plan every program around your group's size, schedule and goals.</p>
+        </div>
+        <div class="who-grid">
+            <div class="who-card fade-in">
+                <div class="who-icon">🏫</div>
+                <h3>Schools &amp; Youth</h3>
+                <p>Leadership expeditions, backpacking and canoe courses for international schools and youth groups, with a clear learning goal for every day on the trail.</p>
+                <div class="who-tags"><span>Leadership</span><span>Backpacking</span><span>Canoe Level 1</span></div>
+                <a href="./youth-outdoor-leadership.html" class="card-link">Youth Outdoor Leadership →</a>
+            </div>
+            <div class="who-card fade-in">
+                <div class="who-icon">👥</div>
+                <h3>Organizations &amp; Groups</h3>
+                <p>Team days and overnight trips for companies, universities and communities: canoe, camping, climbing and hiking, planned around your group.</p>
+                <div class="who-tags"><span>Canoe Tour</span><span>Camping</span><span>Climbing</span></div>
+                <a href="#programs" class="card-link">See all programs →</a>
+            </div>
+            <div class="who-card fade-in">
+                <div class="who-icon">🎒</div>
+                <h3>Individuals &amp; Families</h3>
+                <p>Individuals and families are welcome too. Tell us when you're free and what you'd like to try, and we'll suggest the best way to join.</p>
+                <div class="who-tags"><span>English-led</span><span>Custom dates</span></div>
+                <a href="https://wa.me/message/T42FN3SMJTH4G1" target="_blank" rel="noopener" data-wa="who" class="card-link">Ask us on WhatsApp →</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ══ YOUTH LEADERSHIP BANNER ═══════════════════════════════ -->
 <section id="youth-banner" style="padding: 0; position: relative; overflow: hidden; height: 420px;">
@@ -753,10 +818,10 @@
                 <div class="section-label">Who We Are</div>
                 <h2>Education-First.<br><span>Always Outdoors.</span></h2>
                 <p>
-                    PlayOutside Korea is an outdoor education cooperative dedicated to introducing Korea's diverse nature and rich culture through authentic wilderness experiences. We believe that true learning and deep cultural connection happen when we step beyond the classroom doors and into the wild.
+                    PlayOutside Korea is an outdoor education cooperative. We use Korea's mountains and rivers as a classroom, combining hiking, backpacking, canoeing, camping and rock climbing with navigation skills and Leave No Trace ethics.
                 </p>
                 <p>
-                    From the rugged ridges and granite faces of Korea's mountains to the tranquil currents of the Hongcheon River, we utilize Korea's pristine environments as a living classroom. By combining a structured curriculum of hiking, backpacking, rock climbing, canoeing, and camping with Smart Wilderness Navigation (orienteering & geocaching) and strict Leave No Trace (LNT) ethics, we empower youth and international communities to build lifelong leadership, resilience, teamwork, and self-reliance while discovering the true essence of Korea.
+                    Our programs are led in English for international schools, organizations and groups, so participants build teamwork and self-reliance while getting to know Korea's nature and culture.
                 </p>
 
                 <div class="pillars">
@@ -770,8 +835,8 @@
                     <div class="pillar">
                         <div class="pillar-icon">🧭</div>
                         <div class="pillar-text">
-                            <h4>Humanistic Approach</h4>
-                            <p>We connect participants with Korea's cultural and natural heritage — the 산 (mountain spirit), seasonal rhythms, and traditional ecological knowledge.</p>
+                            <h4>Real Korea</h4>
+                            <p>Seasons, mountain culture and local nature, not just the view.</p>
                         </div>
                     </div>
                     <div class="pillar">
@@ -829,11 +894,11 @@
                 </div>
                 <div class="program-card-body">
                     <h3>The Flow on River – Canoe Academy</h3>
-                    <p>Master canoe skills with experts and discover the beauty of Korea's rivers through a unique blend of nature and culture.</p>
+                    <p>Two ways to paddle the Hongcheon River: the <strong>Level 1 course</strong> (ground school, strokes, capsize and rescue drills, with a Level 1 certificate) or a <strong>canoe tour</strong> with no experience needed.</p>
                     <div class="program-meta">
                         <div class="meta-item">
                             <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                            1–2 days
+                            1–3 days
                         </div>
                         <div class="meta-item">
                             <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
@@ -842,6 +907,31 @@
                     </div>
                     <div style="display:flex; gap:16px; align-items:center;">
                         <a href="./canoe-tour.html" class="card-link">Learn More →</a>
+                        <a href="#contact" class="card-link">Contact Us →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card fade-in">
+                <div class="program-card-img">
+                    <img src="./photo/backpacking/jirisan-04-terraces.jpg" alt="Backpacking School on the Jirisan Dulle-gil" loading="lazy">
+                    <span class="prog-badge">Backpacking</span>
+                </div>
+                <div class="program-card-body">
+                    <h3>Backpacking School</h3>
+                    <p>Everything for two days in one backpack: packing light, walking together, pitching your own tent and Leave No Trace. See our recent trips to Jirisan and Hongseong.</p>
+                    <div class="program-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            1 night 2 days
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Groups &amp; individuals
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:16px; align-items:center;">
+                        <a href="./backpacking-school.html" class="card-link">See Recaps →</a>
                         <a href="#contact" class="card-link">Contact Us →</a>
                     </div>
                 </div>
@@ -890,12 +980,33 @@
                     <a href="#contact" class="card-link">Contact Us →</a>
                 </div>
             </div>
+
+            <div class="program-card fade-in">
+                <div class="program-card-img">
+                    <img src="./photo/플레이아웃사이드9.jpeg" alt="Participants camping together in a tent" loading="lazy">
+                    <span class="prog-badge">Custom</span>
+                </div>
+                <div class="program-card-body">
+                    <h3>Custom Program</h3>
+                    <p>Have a goal, a date or a group in mind? We design programs around your group's size, schedule and learning goals, from a single day to a multi-day expedition.</p>
+                    <div class="program-meta">
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            1 day and up
+                        </div>
+                        <div class="meta-item">
+                            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            Any group size
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:16px; align-items:center;">
+                        <a href="#contact" class="card-link">Plan with Us →</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div style="text-align:center; margin-top: 48px;" class="fade-in">
-            <p style="color:var(--ink-muted); margin-bottom: 20px;">All programs are customizable for group size, duration, and learning goals.</p>
-            <a href="#contact" class="btn btn-primary">Request a Custom Program →</a>
-        </div>
+        <p style="text-align:center; margin-top: 40px; color:var(--ink-muted);" class="fade-in">All programs are led in English and can be customized for group size, duration and learning goals.</p>
     </div>
 </section>
 
@@ -993,6 +1104,122 @@
     </div>
 </section>
 
+<!-- ══ FAQ ═══════════════════════════════════════════════════ -->
+<section id="faq">
+    <div class="container">
+        <div class="faq-header fade-in">
+            <div class="section-label">FAQ</div>
+            <h2>Good to Know</h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item fade-in">
+                <summary>Do we need outdoor experience?</summary>
+                <p>No experience is needed for our introductory programs, such as the canoe tour. For other programs, tell us about your group&#x27;s experience and we&#x27;ll match the level to you.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>Are programs led in English?</summary>
+                <p>Yes. All of our programs are led in English.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>How do we get there?</summary>
+                <p>It depends on the program. For some we provide transport, and for others we meet at a place you can reach by public transport. We&#x27;ll send directions when we plan your trip.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>How much does it cost?</summary>
+                <p>Pricing depends on the program, group size and dates. Send us those details and we&#x27;ll prepare a quote for your group.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>Can individuals or families join?</summary>
+                <p>Yes. Our programs are mainly for schools, organizations and groups, but individuals and families are welcome. Tell us your dates and we&#x27;ll suggest the best way to join.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>What should we bring?</summary>
+                <p>We&#x27;ll send a packing list for your program. For overnight programs, ask us about renting tents, sleeping bags and mats.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>What happens if the weather is bad?</summary>
+                <p>Our instructors check the weather before and during every program. If conditions aren&#x27;t safe, we change the route or reschedule with you.</p>
+            </details>
+            <details class="faq-item fade-in">
+                <summary>How do we book?</summary>
+                <p>Message us on WhatsApp or KakaoTalk, or send the inquiry form below with your group size, preferred dates and the program you&#x27;re interested in.</p>
+            </details>
+        </div>
+    </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do we need outdoor experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No experience is needed for our introductory programs, such as the canoe tour. For other programs, tell us about your group's experience and we'll match the level to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are programs led in English?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All of our programs are led in English."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we get there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the program. For some we provide transport, and for others we meet at a place you can reach by public transport. We'll send directions when we plan your trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing depends on the program, group size and dates. Send us those details and we'll prepare a quote for your group."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can individuals or families join?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our programs are mainly for schools, organizations and groups, but individuals and families are welcome. Tell us your dates and we'll suggest the best way to join."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should we bring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We'll send a packing list for your program. For overnight programs, ask us about renting tents, sleeping bags and mats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the weather is bad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our instructors check the weather before and during every program. If conditions aren't safe, we change the route or reschedule with you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Message us on WhatsApp or KakaoTalk, or send the inquiry form below with your group size, preferred dates and the program you're interested in."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- ══ CONTACT ════════════════════════════════════════════════ -->
 <section id="contact">
     <div class="container">
@@ -1000,7 +1227,7 @@
             <div class="contact-info fade-in">
                 <div class="section-label">Get in Touch</div>
                 <h2>Ready to Learn Outside?</h2>
-                <p>Whether you are curious about a specific program, want to book a school group, or need a fully custom expedition designed around your goals — we would love to hear from you.</p>
+                <p>Whether you are curious about a specific program, want to book a school group, or need a fully custom expedition designed around your goals, we would love to hear from you. <strong>For the quickest reply, message us on WhatsApp.</strong> For detailed requests, use the form.</p>
 
                 <div class="contact-detail">
                     <div class="contact-detail-icon">💬</div>
@@ -1058,6 +1285,7 @@
                                 <option value="" disabled selected>Select a program</option>
                                 <option>Youth Outdoor Leadership</option>
                                 <option>The Flow on River – Canoe Academy</option>
+                                <option>Backpacking School</option>
                                 <option>The Night in Woods</option>
                                 <option>Rock Climbing Korea</option>
                                 <option value="custom">Custom Program Request</option>
@@ -1221,9 +1449,6 @@
             btn.disabled = false;
         }
     });
-
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('dragstart', e => e.preventDefault());
 </script>
 
 
